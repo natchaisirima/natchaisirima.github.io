@@ -410,12 +410,15 @@ section:nth-of-type(even) { background: #f4f6f8; }
 
 .edu-photo {
   margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  max-width: 260px;
 }
 
 .edu-photo img {
   width: 100%;
-  max-width: 260px;
-  height: 160px;
+  height: 110px;
   object-fit: cover;
   object-position: center top;
   border-radius: 8px;
@@ -497,6 +500,9 @@ footer a:hover { text-decoration: underline; }
 }
 
 .card-photos img:hover { opacity: 0.82; }
+
+.card-photos-single { grid-template-columns: 1fr; }
+.card-photos-single img { height: 120px; }
 
 /* ── Lightbox ─────────────────────────────── */
 #lightbox {
