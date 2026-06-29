@@ -190,6 +190,11 @@
               12 km elevated railway viaduct including station buildings at Angeles and Clark.
               Leading full environmental compliance as officially confirmed Environmental Manager under GCR Consortium.
             </p>
+            <div class="card-photos">
+              <img src="img/nscr1.jpg" alt="NSCR-EX viaduct construction" onclick="openPhoto(this.src)">
+              <img src="img/nscr2.jpg" alt="NSCR-EX site inspection" onclick="openPhoto(this.src)">
+              <img src="img/nscr3.jpg" alt="NSCR-EX pier columns" onclick="openPhoto(this.src)">
+            </div>
             <div class="project-tags">
               <span>Railway</span><span>CEMMP</span><span>EMU</span><span>DENR-EMB</span><span>ECC</span>
             </div>
@@ -206,6 +211,11 @@
               650 MW RCC curved gravity dam (Max. Height: 177 m). Designed and managed the full
               Environmental Management Plan covering construction, waste, landfill, and all monitoring.
             </p>
+            <div class="card-photos">
+              <img src="img/laos1.jpg" alt="Nam Theun 1 dam face" onclick="openPhoto(this.src)">
+              <img src="img/laos2.jpg" alt="Nam Theun 1 spillway" onclick="openPhoto(this.src)">
+              <img src="img/laos3.jpg" alt="Nam Theun 1 penstock tunnel" onclick="openPhoto(this.src)">
+            </div>
             <div class="project-tags">
               <span>Hydropower</span><span>EMP</span><span>Water Quality</span><span>Waste Mgmt</span>
             </div>
@@ -319,5 +329,25 @@
     <p>Copyright &copy; Natchai Sirima 2026 &nbsp;|&nbsp; <a href="#page-top">Back to top &#8593;</a></p>
   </footer>
 
+  <!-- Lightbox -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+    <span id="lightbox-close">&times;</span>
+  </div>
+
+  <script>
+    function openPhoto(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 </body>
 </html>

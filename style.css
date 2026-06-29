@@ -459,6 +459,58 @@ footer {
 footer a { color: #27ae60; }
 footer a:hover { text-decoration: underline; }
 
+/* ── Card photos ─────────────────────────── */
+.card-photos {
+  display: flex;
+  gap: 6px;
+  margin: 4px 0;
+}
+
+.card-photos img {
+  flex: 1;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: opacity 0.18s, transform 0.18s;
+}
+
+.card-photos img:hover {
+  opacity: 0.88;
+  transform: scale(1.02);
+}
+
+/* ── Lightbox ─────────────────────────────── */
+#lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+#lightbox-img {
+  max-width: 92vw;
+  max-height: 88vh;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+}
+
+#lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  color: white;
+  font-size: 2.2rem;
+  cursor: pointer;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+#lightbox-close:hover { opacity: 1; }
+
 /* ── Mobile contact block (hidden on desktop) ── */
 .mobile-contact {
   display: none;
