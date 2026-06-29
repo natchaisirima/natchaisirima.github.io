@@ -408,6 +408,24 @@ section:nth-of-type(even) { background: #f4f6f8; }
   font-weight: 600;
 }
 
+.edu-photo {
+  margin-top: 10px;
+}
+
+.edu-photo img {
+  width: 100%;
+  max-width: 260px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 8px;
+  cursor: pointer;
+  display: block;
+  transition: opacity 0.18s;
+}
+
+.edu-photo img:hover { opacity: 0.85; }
+
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
