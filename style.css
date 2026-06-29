@@ -459,17 +459,54 @@ footer {
 footer a { color: #27ae60; }
 footer a:hover { text-decoration: underline; }
 
+/* ── Mobile contact block (hidden on desktop) ── */
+.mobile-contact {
+  display: none;
+}
+
 /* ── Responsive ──────────────────────────── */
 @media (max-width: 768px) {
-  .header-profile   { flex-direction: column; text-align: center; }
-  .header-links     { justify-content: center; }
-  .contact-info .sep { display: none; }
-  .contact-info     { display: flex; flex-direction: column; align-items: center; gap: 3px; }
-  .main-nav ul      { justify-content: center; flex-wrap: wrap; gap: 16px; }
-  .timeline-item    { grid-template-columns: 1fr; }
-  .timeline-item::after { display: none; }
-  .timeline-meta    { text-align: left; }
-  .timeline-content::before { display: none; }
-  .skills-layout    { grid-template-columns: 1fr; gap: 32px; }
+  /* Compact header — one slim row */
+  .header-inner     { padding: 10px 16px; gap: 8px; }
+  .header-profile   { flex-direction: row; align-items: center; gap: 10px; }
+  .avatar           { width: 42px; height: 42px; border-width: 2px; }
+  .header-text h1   { font-size: 1.05rem; letter-spacing: 0.03em; }
+  .subtitle         { font-size: 0.7rem; margin: 1px 0 0; letter-spacing: 0.04em; }
+  .contact-info     { display: none; }
+  .header-links     { display: none; }
+
+  /* Nav — centered, smaller */
+  .main-nav ul      { justify-content: center; flex-wrap: wrap; gap: 12px; }
+  .main-nav a       { font-size: 0.82rem; }
+
+  /* Show contact info inside About section on mobile */
+  .mobile-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 24px;
+    font-size: 0.85rem;
+    color: #374151;
+  }
+  .mobile-contact a       { color: #1a72a8; }
+  .mobile-contact .mc-row { display: flex; align-items: center; gap: 8px; }
+  .mobile-contact .mc-icon { color: #27ae60; font-size: 0.9rem; }
+
+  /* Mobile CV + LinkedIn buttons */
+  .mobile-contact .mc-links { display: flex; gap: 8px; margin-top: 4px; }
+
+  /* Sections */
+  .section-inner    { padding: 36px 16px; }
   .highlights       { justify-content: center; }
+  .highlight-card   { min-width: 120px; padding: 16px 20px; }
+  .highlight-num    { font-size: 1.4rem; }
+
+  /* Timeline */
+  .timeline-item            { grid-template-columns: 1fr; }
+  .timeline-item::after     { display: none; }
+  .timeline-meta            { text-align: left; }
+  .timeline-content::before { display: none; }
+
+  /* Skills */
+  .skills-layout    { grid-template-columns: 1fr; gap: 32px; }
 }
