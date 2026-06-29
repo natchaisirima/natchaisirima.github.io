@@ -503,6 +503,8 @@ footer a:hover { text-decoration: underline; }
 .card-photos-single { grid-template-columns: 1fr; }
 .card-photos-single img { height: 120px; }
 
+.card-photos-two { grid-template-columns: 1fr 1fr; }
+
 /* ── Lightbox ─────────────────────────────── */
 #lightbox {
   display: none;
