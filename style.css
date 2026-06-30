@@ -309,6 +309,59 @@ section:nth-of-type(even) { background: #f4f6f8; }
 
 .timeline-content ul li { margin-bottom: 5px; }
 
+/* ── Role progression bar ───────────────── */
+.role-progression {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0 16px;
+  padding: 12px 14px;
+  background: #f0f7ff;
+  border: 1px solid #c8dff0;
+  border-radius: 10px;
+}
+
+.role-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  border: 1.5px solid #c8dff0;
+  border-radius: 8px;
+  padding: 6px 12px;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.role-step-current {
+  border-color: #27ae60;
+  background: #f0fff6;
+}
+
+.role-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #0d3b66;
+  line-height: 1.3;
+}
+
+.role-step-current .role-title { color: #1a7a3e; }
+
+.role-period {
+  font-size: 0.68rem;
+  color: #6b7280;
+  margin-top: 3px;
+}
+
+.role-arrow {
+  color: #27ae60;
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
 /* ── Projects ────────────────────────────── */
 .projects-grid {
   display: grid;
