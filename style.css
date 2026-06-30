@@ -206,11 +206,15 @@ section:nth-of-type(even) { background: #f4f6f8; }
 }
 
 .timeline-date {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #1a72a8;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0d3b66;
   display: block;
   line-height: 1.4;
+  background: #e8f0f8;
+  padding: 4px 8px;
+  border-radius: 6px;
+  text-align: center;
 }
 
 .timeline-badge {
