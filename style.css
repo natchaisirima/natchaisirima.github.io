@@ -233,6 +233,20 @@ section:nth-of-type(even) { background: #f4f6f8; }
   color: #1a7a3e;
 }
 
+.tenure-counter {
+  display: block;
+  margin-top: 6px;
+  padding: 3px 8px;
+  background: #fff8e1;
+  color: #7d5a00;
+  border: 1px solid #f0d070;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
 .timeline-content {
   background: #f8fafc;
   border: 1px solid #e0e8f0;

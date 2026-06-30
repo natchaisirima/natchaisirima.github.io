@@ -100,6 +100,7 @@
             <div class="timeline-meta">
               <span class="timeline-date">NOV 2020 – PRESENT</span>
               <span class="timeline-badge current">Current</span>
+              <span class="tenure-counter" id="tenure-counter"></span>
             </div>
             <div class="timeline-content">
               <h3>Environmental Manager</h3>
@@ -350,6 +351,18 @@
   </div>
 
   <script>
+    (function updateTenure() {
+      var start = new Date(2020, 10, 1); // Nov 1, 2020
+      var now = new Date();
+      var y = now.getFullYear() - start.getFullYear();
+      var m = now.getMonth() - start.getMonth();
+      var d = now.getDate() - start.getDate();
+      if (d < 0) { m--; var prev = new Date(now.getFullYear(), now.getMonth(), 0); d += prev.getDate(); }
+      if (m < 0) { y--; m += 12; }
+      var el = document.getElementById('tenure-counter');
+      if (el) el.textContent = y + 'y ' + m + 'm ' + d + 'd';
+    })();
+
     function openPhoto(src) {
       document.getElementById('lightbox-img').src = src;
       document.getElementById('lightbox').style.display = 'flex';
