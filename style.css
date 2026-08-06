@@ -568,6 +568,7 @@ footer a:hover { text-decoration: underline; }
   cursor: pointer;
   display: block;
   transition: opacity 0.18s;
+  -webkit-touch-callout: none;
 }
 
 .card-photos img:hover { opacity: 0.82; }
