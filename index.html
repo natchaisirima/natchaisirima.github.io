@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Natchai Sirima — Environmental Manager and Environmental Engineer. EIA compliance, environmental monitoring, and management on major infrastructure projects across Thailand, Laos, Myanmar, and the Philippines.">
+  <meta name="description" content="Natchai Sirima — Environmental Manager and Environmental Engineer. EIA compliance, environmental monitoring and management on major infrastructure projects across Thailand, Laos, Myanmar and the Philippines, combined with AI-assisted development of practical environmental, reporting and monitoring tools.">
   <title>Natchai Sirima – Environmental Manager</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -28,6 +28,8 @@
           </div>
           <div class="header-links">
             <a href="Natchai_Sirima_CV.pdf" class="btn-link" target="_blank">Download CV</a>
+            <a href="Natchai_Sirima_ITD_CV_ENG.pdf" class="btn-link btn-link-alt" target="_blank">ITD CV (ENG)</a>
+            <a href="Natchai_Sirima_ITD_CV_TH.pdf" class="btn-link btn-link-alt" target="_blank" hreflang="th">ITD CV (TH)</a>
             <a href="https://www.linkedin.com/in/natchai-sirima-2915b6185/" class="btn-link" target="_blank">LinkedIn</a>
           </div>
         </div>
@@ -37,6 +39,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#digital">AI &amp; Digital</a></li>
           <li><a href="#skills">Skills</a></li>
         </ul>
       </nav>
@@ -56,6 +59,8 @@
           <div class="mc-row"><span class="mc-icon">📍</span><span>Bangkok, Thailand / Pampanga, Philippines</span></div>
           <div class="mc-links">
             <a href="Natchai_Sirima_CV.pdf" class="btn-link" target="_blank">Download CV</a>
+            <a href="Natchai_Sirima_ITD_CV_ENG.pdf" class="btn-link btn-link-alt" target="_blank">ITD CV (ENG)</a>
+            <a href="Natchai_Sirima_ITD_CV_TH.pdf" class="btn-link btn-link-alt" target="_blank" hreflang="th">ITD CV (TH)</a>
             <a href="https://www.linkedin.com/in/natchai-sirima-2915b6185/" class="btn-link" target="_blank">LinkedIn</a>
           </div>
         </div>
@@ -67,7 +72,10 @@
           Proven Environmental Manager for <strong>USD 400M+ international projects</strong> with expertise in
           EIA/EIS compliance, Contractor Environmental Management and Monitoring Plan (CEMMP) implementation,
           regulatory coordination, and environmental monitoring systems.
-</p>
+          Complements this field and management experience with <strong>AI-assisted development</strong>,
+          building and deploying practical web applications, monitoring and alerting systems, and reporting
+          automation that are in day-to-day use on live construction projects.
+        </p>
         <div class="highlights">
           <div class="highlight-card">
             <span class="highlight-num">12+</span>
@@ -314,6 +322,150 @@
 
     <hr class="section-divider">
 
+    <!-- AI & DIGITAL ENGINEERING -->
+    <section id="digital">
+      <div class="section-inner">
+        <h2 class="section-title">AI &amp; Digital Engineering</h2>
+
+        <p class="summary-text">
+          Environmental engineering professional combining field and management experience with
+          <strong>AI-assisted software development</strong>. I use modern AI coding agents to turn day-to-day
+          operational requirements &mdash; permits, inspections, monitoring, reporting, document control &mdash;
+          into working, tested tools that project teams actually use. Domain knowledge decides what gets built
+          and validates the output; AI accelerates the build.
+        </p>
+        <p class="digital-note">
+          Every system below started from a real problem on a live construction project, was specified against
+          existing procedures and official document formats, and was reviewed and tested before staff relied on it.
+        </p>
+
+        <div class="apps-grid">
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Environmental Management Portal</h3>
+              <span class="app-status live">Live</span>
+            </div>
+            <p class="app-desc">
+              Single web portal for a railway project's environmental registers &mdash; permits, work inspection
+              requests, monitoring records and daily activity.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Permit expiries, inspection requests and monitoring records sat in separate spreadsheets held by different staff, so renewals and open items were easy to miss.</dd></div>
+              <div><dt>Impact</dt><dd>One register the whole unit works from, with renewal alarms, filtered reporting and a complete audit trail of who changed what.</dd></div>
+            </dl>
+            <div class="app-tags"><span>Web App</span><span>Firebase</span><span>Firestore</span><span>JavaScript</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Designed and built with AI coding agents; the register logic itself stays fully deterministic.</p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Construction Weather Alert System</h3>
+              <span class="app-status live">Live</span>
+            </div>
+            <p class="app-desc">
+              Site-specific rainfall forecasting and automatic rain alerts along a 21 km railway construction corridor.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>City-level forecasts cannot tell a crew whether rain will reach a particular structure within the hour, so concreting and lifting decisions relied on guesswork.</dd></div>
+              <div><dt>Impact</dt><dd>Fixed daily forecast briefings plus escalating live rain alerts to the site group chat and crew phones, on a graded monitor &rarr; alert &rarr; evacuate ladder proven in real storm conditions.</dd></div>
+            </dl>
+            <div class="app-tags"><span>Node.js</span><span>Cloud Run</span><span>Scheduled Jobs</span><span>Messaging API</span><span>Automated Tests</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> A language model writes the plain-language briefing from the forecast data, with a deterministic fallback so alerts still send if the model is unavailable.</p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Submittal Close-Out Tracker</h3>
+              <span class="app-status live">Live</span>
+            </div>
+            <p class="app-desc">
+              Shared dashboard showing which technical submittals are still open, and with whom.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Pending document status lived in workbooks refreshed by hand, so the list was already stale by the time it was circulated.</dd></div>
+              <div><dt>Impact</dt><dd>Automatic twice-daily refresh from the source register, manual corrections that survive each sync, and a cross-check that catches superseded revisions. Used daily by QA/QC and engineering staff.</dd></div>
+            </dl>
+            <div class="app-tags"><span>Python</span><span>Flask</span><span>Cloud Run</span><span>Scheduled Sync</span><span>Automated Tests</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Built with AI coding agents; an optional AI analysis module is kept switched off to protect record integrity.</p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Inspection Response Generator</h3>
+              <span class="app-status pilot">Pilot</span>
+            </div>
+            <p class="app-desc">
+              Turns an incoming environmental site inspection report into a staff-reviewed close-out response.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Every inspection finding was re-typed by hand into a response document, with evidence photographs collected and matched separately.</dd></div>
+              <div><dt>Impact</dt><dd>Findings extracted automatically, site evidence attached in the field, and the response drafted and exported in the required format &mdash; turning a multi-day document cycle into hours.</dd></div>
+            </dl>
+            <div class="app-tags"><span>React</span><span>PDF Extraction</span><span>Word Export</span><span>Mobile &amp; Desktop</span><span>400+ Automated Checks</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Drafts each finding's closing statement from the evidence staff record on site; nothing is issued without staff review and approval.</p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Terminal Report Generator</h3>
+              <span class="app-status live">Deployed</span>
+            </div>
+            <p class="app-desc">
+              Builds the statutory tree-cutting report and its six annexes in the exact official Word format.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Assembling each submission &mdash; agency daily logs, before/during/after photographs, permits, equipment registration and turnover records &mdash; took days of manual document work.</dd></div>
+              <div><dt>Impact</dt><dd>Staff enter structured data, import the tree schedule from Excel and upload photographs; the complete formatted report is generated in one step. Runs as a web app and as an offline desktop app.</dd></div>
+            </dl>
+            <div class="app-tags"><span>Next.js</span><span>TypeScript</span><span>Word Generation</span><span>Excel Import</span><span>Desktop App</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Built with AI coding agents; document assembly itself is rule-based so every figure in the report is traceable.</p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Site Observation Reports</h3>
+              <span class="app-status live">Live</span>
+            </div>
+            <p class="app-desc">
+              Turns field inspection photographs into traceable environmental observation reports.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Observations, photo evidence and the specification clause each related to were recorded separately and reconciled afterwards from memory.</dd></div>
+              <div><dt>Impact</dt><dd>Photo location resolved to the nearest structure automatically, observations anchored to the project's environmental specification, numbering and export handled by the tool.</dd></div>
+            </dl>
+            <div class="app-tags"><span>React</span><span>Photo GPS / EXIF</span><span>OCR</span><span>Word &amp; Excel Export</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Assists in classifying and writing up observations against the project specification, with the model accessed through a secured server-side service.</p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Site Photo Auto-Labeler</h3>
+              <span class="app-status live">In Use</span>
+            </div>
+            <p class="app-desc">
+              Stamps every construction photograph with its nearest structure number, date, time and coordinates.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Thousands of site photographs arrived with no reliable location, making it slow and error-prone to file them against the right structure.</dd></div>
+              <div><dt>Impact</dt><dd>Photographs come off the phone already labelled and filing-ready, and the app works offline in the field from an embedded location database built from project survey data.</dd></div>
+            </dl>
+            <div class="app-tags"><span>iOS (SwiftUI)</span><span>Android</span><span>macOS</span><span>Python</span><span>Offline GPS</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Built with AI coding agents; on-device text recognition reads coordinates already printed on older photographs.</p>
+          </article>
+
+        </div>
+
+        <p class="digital-footnote">
+          Beyond project work, I maintain <strong>PinoyTools</strong>, a public Philippine salary and labour-law
+          calculator site, to the same standard &mdash; over 100 releases and an automated calculation test suite &mdash;
+          as continuing practice in production web development.
+        </p>
+      </div>
+    </section>
+
+    <hr class="section-divider">
+
     <!-- SKILLS & EDUCATION -->
     <section id="skills">
       <div class="section-inner">
@@ -335,6 +487,8 @@
 
           <div class="skills-col">
             <h2 class="section-title">Professional Skills</h2>
+
+            <h3 class="skills-subtitle">Environmental &amp; Management</h3>
             <div class="skills-grid">
               <span class="skill-item">CEMMP Implementation</span>
               <span class="skill-item">EIA / EIS Compliance</span>
@@ -344,13 +498,31 @@
               <span class="skill-item">Hazardous Waste Management</span>
               <span class="skill-item">Air Quality Monitoring</span>
               <span class="skill-item">Noise &amp; Vibration Monitoring</span>
-              <span class="skill-item">AI Tools</span>
               <span class="skill-item">Regulatory Coordination</span>
               <span class="skill-item">Permit Management</span>
+              <span class="skill-item">Monitoring Instruments</span>
               <span class="skill-item">AutoCAD</span>
               <span class="skill-item">MS Office</span>
               <span class="skill-item">Photoshop</span>
-              <span class="skill-item">Monitoring Instruments</span>
+            </div>
+
+            <h3 class="skills-subtitle">AI &amp; Digital</h3>
+            <div class="skills-grid skills-grid-digital">
+              <span class="skill-item">AI-Assisted Development</span>
+              <span class="skill-item">Vibe Coding</span>
+              <span class="skill-item">AI Coding Agents</span>
+              <span class="skill-item">Workflow Automation</span>
+              <span class="skill-item">Web Applications</span>
+              <span class="skill-item">Dashboard Development</span>
+              <span class="skill-item">LLM Integration</span>
+              <span class="skill-item">Document Intelligence</span>
+              <span class="skill-item">Data Automation</span>
+              <span class="skill-item">Reporting Automation</span>
+              <span class="skill-item">Mobile Apps (iOS / Android)</span>
+              <span class="skill-item">API Integration</span>
+              <span class="skill-item">Automated Testing</span>
+              <span class="skill-item">Cloud Deployment</span>
+              <span class="skill-item">Git / GitHub</span>
             </div>
           </div>
 
