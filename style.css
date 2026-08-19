@@ -723,6 +723,19 @@ section[id],
   margin-bottom: 26px;
 }
 
+.apps-group {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #0d3b66;
+  margin: 6px 0 14px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #dbe5ee;
+}
+
+.apps-grid + .apps-group { margin-top: 34px; }
+
 .apps-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -939,3 +952,12 @@ section[id],
   section[id],
   #page-top      { scroll-margin-top: 136px; }
 }
+
+/* ── Footer view counter ────────────────────── */
+.viewcount {
+  margin-top: 6px;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  opacity: 0.5;
+}
+.viewcount[hidden] { display: none; }

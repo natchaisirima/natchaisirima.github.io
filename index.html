@@ -334,11 +334,17 @@
           into working, tested tools that project teams actually use. Domain knowledge decides what gets built
           and validates the output; AI accelerates the build.
         </p>
+        <p class="summary-text">
+          Most of these systems began as problems I ran into in my own work &mdash; a register drifting out of date,
+          a report that took days to assemble, evidence scattered across thousands of documents &mdash; which I then
+          specified, built and put into use.
+        </p>
         <p class="digital-note">
           Every system below started from a real problem on a live construction project, was specified against
           existing procedures and official document formats, and was reviewed and tested before staff relied on it.
         </p>
 
+        <h3 class="apps-group">Environmental &amp; Construction Systems</h3>
         <div class="apps-grid">
 
           <article class="app-card">
@@ -347,8 +353,7 @@
               <span class="app-status live">Live</span>
             </div>
             <p class="app-desc">
-              Single web portal for a railway project's environmental registers &mdash; permits, work inspection
-              requests, monitoring records and daily activity.
+              Identified that the unit&rsquo;s registers were drifting apart across separate spreadsheets, and built a single web portal for permits, work inspection requests, monitoring records and daily activity.
             </p>
             <dl class="app-facts">
               <div><dt>Problem</dt><dd>Permit expiries, inspection requests and monitoring records sat in separate spreadsheets held by different staff, so renewals and open items were easy to miss.</dd></div>
@@ -364,7 +369,7 @@
               <span class="app-status live">Live</span>
             </div>
             <p class="app-desc">
-              Site-specific rainfall forecasting and automatic rain alerts along a 21 km railway construction corridor.
+              Developed to answer a question generic forecasts could not &mdash; will it rain on this stretch of the corridor in the next hour &mdash; with automatic alerts to the site team.
             </p>
             <dl class="app-facts">
               <div><dt>Problem</dt><dd>City-level forecasts cannot tell a crew whether rain will reach a particular structure within the hour, so concreting and lifting decisions relied on guesswork.</dd></div>
@@ -376,27 +381,11 @@
 
           <article class="app-card">
             <div class="app-card-head">
-              <h3>Submittal Close-Out Tracker</h3>
-              <span class="app-status live">Live</span>
-            </div>
-            <p class="app-desc">
-              Shared dashboard showing which technical submittals are still open, and with whom.
-            </p>
-            <dl class="app-facts">
-              <div><dt>Problem</dt><dd>Pending document status lived in workbooks refreshed by hand, so the list was already stale by the time it was circulated.</dd></div>
-              <div><dt>Impact</dt><dd>Automatic twice-daily refresh from the source register, manual corrections that survive each sync, and a cross-check that catches superseded revisions. Used daily by QA/QC and engineering staff.</dd></div>
-            </dl>
-            <div class="app-tags"><span>Python</span><span>Flask</span><span>Cloud Run</span><span>Scheduled Sync</span><span>Automated Tests</span></div>
-            <p class="app-ai"><span class="app-ai-label">AI role</span> Built with AI coding agents; an optional AI analysis module is kept switched off to protect record integrity.</p>
-          </article>
-
-          <article class="app-card">
-            <div class="app-card-head">
               <h3>Inspection Response Generator</h3>
               <span class="app-status pilot">Pilot</span>
             </div>
             <p class="app-desc">
-              Turns an incoming environmental site inspection report into a staff-reviewed close-out response.
+              Created to end the re-typing of every inspection finding into a response document, turning an incoming site inspection report into a staff-reviewed close-out response.
             </p>
             <dl class="app-facts">
               <div><dt>Problem</dt><dd>Every inspection finding was re-typed by hand into a response document, with evidence photographs collected and matched separately.</dd></div>
@@ -412,7 +401,7 @@
               <span class="app-status live">Deployed</span>
             </div>
             <p class="app-desc">
-              Builds the statutory tree-cutting report and its six annexes in the exact official Word format.
+              Conceived and implemented to replace days of manual document assembly: builds the statutory tree-cutting report and its six annexes in the exact official Word format.
             </p>
             <dl class="app-facts">
               <div><dt>Problem</dt><dd>Assembling each submission &mdash; agency daily logs, before/during/after photographs, permits, equipment registration and turnover records &mdash; took days of manual document work.</dd></div>
@@ -428,7 +417,7 @@
               <span class="app-status live">Live</span>
             </div>
             <p class="app-desc">
-              Turns field inspection photographs into traceable environmental observation reports.
+              Developed to keep field observations, photo evidence and the specification clause they relate to together in one traceable record.
             </p>
             <dl class="app-facts">
               <div><dt>Problem</dt><dd>Observations, photo evidence and the specification clause each related to were recorded separately and reconciled afterwards from memory.</dd></div>
@@ -444,7 +433,7 @@
               <span class="app-status live">In Use</span>
             </div>
             <p class="app-desc">
-              Stamps every construction photograph with its nearest structure number, date, time and coordinates.
+              Created to solve unlabelled site photography &mdash; stamps every construction photograph with its nearest structure number, date, time and coordinates.
             </p>
             <dl class="app-facts">
               <div><dt>Problem</dt><dd>Thousands of site photographs arrived with no reliable location, making it slow and error-prone to file them against the right structure.</dd></div>
@@ -452,6 +441,80 @@
             </dl>
             <div class="app-tags"><span>iOS (SwiftUI)</span><span>Android</span><span>macOS</span><span>Python</span><span>Offline GPS</span></div>
             <p class="app-ai"><span class="app-ai-label">AI role</span> Built with AI coding agents; on-device text recognition reads coordinates already printed on older photographs.</p>
+          </article>
+
+        </div>
+
+        <h3 class="apps-group">Project Operations &amp; Data Systems</h3>
+        <div class="apps-grid">
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Submittal Close-Out Tracker</h3>
+              <span class="app-status live">Live</span>
+            </div>
+            <p class="app-desc">
+              Built in response to pending-submittal status going stale between manual updates: a shared dashboard of what is still open, and with whom.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Pending document status lived in workbooks refreshed by hand, so the list was already stale by the time it was circulated.</dd></div>
+              <div><dt>Impact</dt><dd>Automatic twice-daily refresh from the source register, manual corrections that survive each sync, and a cross-check that catches superseded revisions. Used daily by QA/QC and engineering staff.</dd></div>
+            </dl>
+            <div class="app-tags"><span>Python</span><span>Flask</span><span>Cloud Run</span><span>Scheduled Sync</span><span>Automated Tests</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Built with AI coding agents; an optional AI analysis module is kept switched off to protect record integrity.</p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Document &amp; Evidence Database</h3>
+              <span class="app-status live">In Use</span>
+            </div>
+            <p class="app-desc">
+              Designed and built to make a 110,000-document project register searchable, linking related documents into traceable evidence trails.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Answering a single technical question meant manually trawling a register of more than 100,000 entries spanning years of project documentation &mdash; days of work, with no assurance nothing had been missed.</dd></div>
+              <div><dt>Impact</dt><dd>Built the extraction pipeline, database and search interface end to end. A question that previously took days is answered in minutes, with every supporting document listed and traceable back to its register entry. Runs strictly locally on a controlled machine.</dd></div>
+            </dl>
+            <div class="app-tags"><span>Python</span><span>Flask</span><span>PostgreSQL</span><span>Document Extraction</span><span>Full-Text Search</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Built with AI coding agents; extraction and linking themselves are rule-based, so every result traces back to a source record rather than a model&rsquo;s guess.</p>
+          </article>
+
+        </div>
+
+        <h3 class="apps-group">AI &amp; Productivity Tools</h3>
+        <div class="apps-grid">
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Team Task &amp; Assignment Board</h3>
+              <span class="app-status live">Live</span>
+            </div>
+            <p class="app-desc">
+              Created to replace scattered chat messages as the way work gets assigned, tracked and closed out across a team.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Assignments lived in chat threads and personal notes, so no one had a reliable picture of what was outstanding or who owned it.</dd></div>
+              <div><dt>Impact</dt><dd>A shared Todo / Doing / Done board with per-person assignment, calendar sync, email notification on assignment and read-only share links &mdash; delivered from one codebase to web, desktop and phone.</dd></div>
+            </dl>
+            <div class="app-tags"><span>JavaScript</span><span>Firebase</span><span>Desktop App</span><span>iOS</span><span>Calendar Sync</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Built with AI coding agents across four delivery targets from a single shared codebase.</p>
+          </article>
+
+          <article class="app-card">
+            <div class="app-card-head">
+              <h3>Meeting Transcription Studio</h3>
+              <span class="app-status live">In Use</span>
+            </div>
+            <p class="app-desc">
+              Built to turn long meeting recordings into speaker-labelled written minutes without sending confidential audio to any outside service.
+            </p>
+            <dl class="app-facts">
+              <div><dt>Problem</dt><dd>Writing up minutes from hour-long recordings was slow, and commercial online transcription services were not an option for confidential discussions.</dd></div>
+              <div><dt>Impact</dt><dd>Drop in a recording and get back a speaker-labelled transcript and a formatted document. Every stage runs on the local machine, so sensitive recordings never leave it.</dd></div>
+            </dl>
+            <div class="app-tags"><span>Python</span><span>On-Device Speech Models</span><span>Speaker Diarization</span><span>Word Export</span><span>Offline</span></div>
+            <p class="app-ai"><span class="app-ai-label">AI role</span> Local speech-recognition and speaker-separation models do the transcription entirely on-device &mdash; no audio is uploaded anywhere.</p>
           </article>
 
         </div>
@@ -546,6 +609,7 @@
 
   <footer>
     <p>Copyright &copy; Natchai Sirima 2026 &nbsp;|&nbsp; <a href="#page-top">Back to top &#8593;</a></p>
+    <p id="viewcount" class="viewcount" hidden></p>
   </footer>
 
   <!-- Lightbox -->
@@ -581,6 +645,61 @@
         var el = meta.querySelector('.tenure-counter');
         if (el) el.textContent = label;
       });
+    })();
+
+    /* ── Page views ──────────────────────────────────────────────────
+       A single shared counter document in Firestore, incremented once
+       per browser per day. No personal data is sent or stored: the
+       request carries nothing but the increment, and the only thing
+       kept locally is today's date so a refresh does not recount.
+       Entirely optional to the page — any failure leaves it hidden. */
+    (function viewCounter() {
+      var PROJECT = 'natchai-portfolio-2026';
+      var KEY = 'AIzaSyDaLb4dGY4oew7logvzGyLdMqOZTP2JQSA';
+      var DOC = 'projects/' + PROJECT + '/databases/(default)/documents/stats/portfolio';
+      var BASE = 'https://firestore.googleapis.com/v1/';
+      var el = document.getElementById('viewcount');
+      if (!el || !window.fetch) return;
+
+      var today = new Date().toISOString().slice(0, 10);
+      var seen = false;
+      try { seen = localStorage.getItem('portfolio-viewed') === today; } catch (e) {}
+
+      function render(n) {
+        if (typeof n !== 'number' || !isFinite(n) || n < 0) return;
+        el.textContent = '\u{1F441} ' + n.toLocaleString('en-US') + (n === 1 ? ' view' : ' views');
+        el.hidden = false;
+      }
+
+      function count() {
+        return fetch(BASE + 'projects/' + PROJECT + '/databases/(default)/documents:commit?key=' + KEY, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            writes: [{
+              transform: {
+                document: DOC,
+                fieldTransforms: [{ fieldPath: 'views', increment: { integerValue: '1' } }]
+              }
+            }]
+          })
+        }).then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          return r.json();
+        }).then(function (j) {
+          try { localStorage.setItem('portfolio-viewed', today); } catch (e) {}
+          return +j.writeResults[0].transformResults[0].integerValue;
+        });
+      }
+
+      function read() {
+        return fetch(BASE + DOC + '?key=' + KEY).then(function (r) {
+          if (!r.ok) throw new Error(r.status);
+          return r.json();
+        }).then(function (j) { return +j.fields.views.integerValue; });
+      }
+
+      (seen ? read() : count().catch(read)).then(render).catch(function () { /* stay hidden */ });
     })();
 
     /* ── Photo viewer ────────────────────────────────────────────────

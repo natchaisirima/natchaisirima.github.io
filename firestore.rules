@@ -1,0 +1,23 @@
+rules_version = '2';
+
+// Public portfolio view counter — one document, no personal data.
+// Anyone may read the total and add exactly one view; nothing else is allowed.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /stats/portfolio {
+      allow read: if true;
+
+      // Only a +1 increment on `views`, and no other field may appear.
+      allow update: if request.resource.data.keys().hasOnly(['views'])
+                    && request.resource.data.views is int
+                    && request.resource.data.views == resource.data.views + 1;
+
+      allow create, delete: if false;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
