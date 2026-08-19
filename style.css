@@ -620,6 +620,16 @@ footer a:hover { text-decoration: underline; }
 }
 
 /* ── Responsive ──────────────────────────── */
+/* ── Sticky-header anchor offset ─────────── */
+/* #site-header is position:sticky, so an anchor jump would tuck the section
+   title underneath it. These clear the tallest measured header at each
+   breakpoint: 230px above 768px (the contact row wraps at narrow desktop
+   widths), 121px below it (the name wraps on small phones). */
+section[id],
+#page-top {
+  scroll-margin-top: 244px;
+}
+
 /* ── AI & Digital Engineering ───────────── */
 #digital .summary-text { margin-bottom: 12px; }
 
@@ -841,4 +851,8 @@ footer a:hover { text-decoration: underline; }
 
   /* Mobile CV buttons wrap onto two rows */
   .mobile-contact .mc-links { flex-wrap: wrap; }
+
+  /* Shorter sticky header on mobile */
+  section[id],
+  #page-top      { scroll-margin-top: 136px; }
 }
