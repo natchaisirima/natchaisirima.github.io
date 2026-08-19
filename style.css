@@ -498,7 +498,7 @@ section:nth-of-type(even) { background: #f4f6f8; }
   object-fit: cover;
   object-position: center top;
   border-radius: 8px;
-  cursor: pointer;
+  cursor: zoom-in;
   display: block;
   transition: opacity 0.18s;
 }
@@ -570,13 +570,15 @@ footer a:hover { text-decoration: underline; }
   object-fit: cover;
   object-position: center;
   border-radius: 6px;
-  cursor: pointer;
+  cursor: zoom-in;
   display: block;
   transition: opacity 0.18s;
   -webkit-touch-callout: none;
 }
 
 .card-photos img:hover { opacity: 0.82; }
+.card-photos img:focus-visible,
+.edu-photo img:focus-visible { outline: 3px solid #27ae60; outline-offset: 2px; }
 
 .card-photos-single { grid-template-columns: 1fr; }
 .card-photos-single img { height: 120px; }
@@ -588,31 +590,112 @@ footer a:hover { text-decoration: underline; }
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.92);
+  background: rgba(0,0,0,0.94);
   z-index: 999;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  overscroll-behavior: contain;
 }
 
-#lightbox-img {
-  max-width: 92vw;
-  max-height: 88vh;
-  border-radius: 8px;
+#lightbox.open { display: flex; }
+
+/* The stage fills the viewport; when zoomed it becomes the pan/scroll area. */
+.lb-stage {
+  flex: 1 1 auto;
+  width: 100%;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#lightbox.zoomed .lb-stage {
+  overflow: auto;
+  align-items: safe center;
+  justify-content: safe center;
+}
+
+/* Sizing is set in px by the viewer so the image grows to fill the viewport
+   while keeping its aspect ratio; these are the guard rails. */
+#lb-img {
+  max-width: 95vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
   box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+  cursor: zoom-in;
+  flex: 0 0 auto;
 }
 
-#lightbox-close {
+#lightbox.zoomed #lb-img {
+  max-width: none;
+  max-height: none;
+  cursor: zoom-out;
+  border-radius: 0;
+}
+
+.lb-bar {
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 10px 64px 16px;
+  text-align: center;
+  color: #d7e3ee;
+  pointer-events: none;
+}
+
+.lb-caption {
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+.lb-counter {
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  opacity: 0.6;
+  margin-top: 3px;
+}
+
+.lb-btn {
   position: absolute;
-  top: 20px;
-  right: 28px;
+  z-index: 2;
+  background: rgba(0,0,0,0.35);
+  border: none;
   color: white;
-  font-size: 2.2rem;
   cursor: pointer;
   line-height: 1;
-  opacity: 0.8;
+  opacity: 0.75;
+  border-radius: 50%;
+  transition: opacity 0.18s, background 0.18s;
+  font-family: inherit;
 }
 
-#lightbox-close:hover { opacity: 1; }
+.lb-btn:hover { opacity: 1; background: rgba(0,0,0,0.6); }
+.lb-btn:focus-visible { outline: 2px solid #7dcfff; outline-offset: 3px; opacity: 1; }
+.lb-btn[hidden] { display: none; }
+
+.lb-close {
+  top: 16px;
+  right: 20px;
+  width: 46px;
+  height: 46px;
+  font-size: 2rem;
+}
+
+.lb-nav {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  font-size: 2.4rem;
+}
+
+.lb-prev { left: 16px; }
+.lb-next { right: 16px; }
 
 /* ── Mobile contact block (hidden on desktop) ── */
 .mobile-contact {
